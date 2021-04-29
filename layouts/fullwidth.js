@@ -14,6 +14,18 @@ const GitalkComponent = dynamic(
   },
   { ssr: false }
 )
+const UtterancesComponent = dynamic(
+  () => {
+    return import('@/components/Utterances')
+  },
+  { ssr: false }
+)
+const CusdisComponent = dynamic(
+  () => {
+    return import('@/components/Cusdis')
+  },
+  { ssr: false }
+)
 
 const mapPageUrl = id => {
   return 'https://www.notion.so/' + id.replace(/-/g, '')
@@ -52,7 +64,7 @@ const FullWidthLayout = ({ children, blockMap, frontMatter }) => {
             </div>
             <div className="mx-2 md:ml-0">
               {formatDate(
-                frontMatter.date || frontMatter.createdTime,
+                frontMatter.start_date || frontMatter.createdTime,
                 BLOG.lang
               )}
             </div>
@@ -114,6 +126,16 @@ const FullWidthLayout = ({ children, blockMap, frontMatter }) => {
             admin: BLOG.comment.gitalkConfig.admin,
             distractionFreeMode: BLOG.comment.gitalkConfig.distractionFreeMode
           }}
+        />
+      )}
+      {BLOG.comment && BLOG.comment.provider === 'utterances' && (
+        <UtterancesComponent issueTerm={frontMatter.id} layout="fullWidth" />
+      )}
+      {BLOG.comment && BLOG.comment.provider === 'cusdis' && (
+        <CusdisComponent
+          id={frontMatter.id}
+          url={BLOG.link + router.asPath}
+          title={frontMatter.title}
         />
       )}
     </Container>
