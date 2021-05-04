@@ -15,7 +15,7 @@ const BLOG = {
   sortByDate: true,
   showAbout: true, // WIP
   showArchive: true, // WIP
-  autoCollapsedNavBar: false, // the automatically collapsed navigation bar
+  autoCollapsedNavBar: true, // the automatically collapsed navigation bar
   socialLink: 'https://zhihu.com/reynd',
   seo: {
     keywords: ['Blog', 'Website', 'Notion'],
