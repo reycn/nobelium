@@ -4,19 +4,37 @@
 @font-face {
   font-family: 'Inter';
   font-weight: 100 900;
-  font-display: optional;
+  font-display: swap;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url('/fonts/Inter-roman.var.woff2') format('woff2');
+  src: url('/fonts/Inter.var.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Inter';
   font-weight: 100 900;
-  font-display: optional;
+  font-display: swap;
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url('/fonts/Inter-italic.var.woff2') format('woff2');
+  src: url('/fonts/Inter-Italic.var.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Source Serif';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/fonts/SourceSerif.var.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Source Serif';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url('/fonts/SourceSerif-Italic.var.woff2') format('woff2');
 }
 
 html {
@@ -70,7 +88,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .sticky-nav-full .nav {
-  @apply text-gray-500 dark:text-gray-400;
+  @apply text-gray-600 dark:text-gray-300;
 }
 
 nav {
@@ -103,6 +121,7 @@ nav {
   }
   .sticky-nav-full .header-name {
     opacity: 1;
+    @apply dark:text-gray-300 text-gray-600;
   }
 }
 
