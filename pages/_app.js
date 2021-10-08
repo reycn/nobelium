@@ -1,8 +1,8 @@
+import '@/styles/notion.css'
 import 'prismjs/themes/prism.css'
-import 'react-notion-x/src/styles.css'
+// import 'rc-dropdown/assets/index.css'
 import 'katex/dist/katex.min.css'
 import '@/styles/globals.css'
-import '@/styles/notion.css'
 import BLOG from '@/blog.config'
 import dynamic from 'next/dynamic'
 import { LocaleProvider } from '@/lib/locale'
@@ -14,13 +14,13 @@ function MyApp({ Component, pageProps }) {
   return (
     <LocaleProvider>
       <>
-        {BLOG.isProd && BLOG?.analytics?.provider === 'ackee' && (
+        {BLOG.analytics && BLOG.analytics === 'ackee' && (
           <Ackee
             ackeeServerUrl={BLOG.analytics.ackeeConfig.dataAckeeServer}
             ackeeDomainId={BLOG.analytics.ackeeConfig.domainId}
           />
         )}
-        {BLOG.isProd && BLOG?.analytics?.provider === 'ga' && <Gtag />}
+        {BLOG.analytics && BLOG.analytics === 'ga' && <Gtag />}
         <Component {...pageProps} />
       </>
     </LocaleProvider>
