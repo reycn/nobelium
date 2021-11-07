@@ -9,6 +9,7 @@ const fontSerifCJK = !CJK()
   : [`"Noto Serif CJK ${CJK()}"`, `"Noto Serif ${CJK()}"`]
 
 module.exports = {
+  mode: 'jit',
   purge: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js'],
   darkMode: BLOG.appearance === 'auto' ? 'media' : 'class', // or 'media' or 'class'
   theme: {
@@ -22,8 +23,8 @@ module.exports = {
         }
       },
       fontFamily: {
-        sans: ['"IBM Plex Sans"', ...fontSansCJK, ...fontFamily.sans],
-        serif: ['"Source Serif"', ...fontSerifCJK, ...fontFamily.serif],
+        sans: ['"IBM Plex Sans"', ...fontFamily.sans, ...fontSansCJK],
+        serif: ['"Source Serif"', ...fontFamily.serif, ...fontSerifCJK],
         noEmoji: [
           '"IBM Plex Sans"',
           'ui-sans-serif',
