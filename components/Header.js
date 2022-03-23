@@ -54,8 +54,8 @@ const Header = ({ navBarTitle, fullWidth }) => {
     // return () => {
     //   if (sentinalRef.current) obvserver.unobserve(sentinalRef.current)
     // }
-    /* eslint-disable-line */
-  }, [sentinalRef])/* eslint-disable-line */
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sentinalRef])
   return (
     <>
       <div className="observer-element h-4 md:h-12" ref={sentinalRef}></div>
