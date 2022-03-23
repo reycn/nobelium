@@ -1,87 +1,89 @@
 /* NOTION CSS OVERRIDE */
 
 .notion {
-  @apply text-gray-600 dark:text-gray-300;
-  overflow-wrap: break-word;
+	@apply text-gray-600 dark:text-gray-300;
+	overflow-wrap: break-word;
+	font-family: "Source Serif", ui-serif, Georgia, Cambria, Times New Roman, Times, serif, "Noto Serif CJK SC",
+		"Noto Serif SC";
 }
 .notion,
 .notion-text,
 .notion-quote,
 .notion-h-title {
-  @apply leading-8;
-  @apply p-0;
-  @apply my-3;
+	@apply leading-8;
+	@apply p-0;
+	@apply my-3;
 }
 .notion-page-link {
-  color: inherit;
+	color: inherit;
 }
 
 svg.notion-page-icon {
-  @apply hidden;
+	@apply hidden;
 }
 
 svg + .notion-page-title-text {
-  @apply border-b-0;
+	@apply border-b-0;
 }
 
 .notion-bookmark {
-  @apply border;
-  @apply border-gray-100;
-  color: inherit;
+	@apply border;
+	@apply border-gray-100;
+	color: inherit;
 }
 
 .notion-bookmark .notion-bookmark-title,
 .notion-bookmark .notion-bookmark-link div {
-  @apply text-gray-900 dark:text-gray-200;
+	@apply text-gray-900 dark:text-gray-200;
 }
 
 .notion-bookmark .notion-bookmark-description {
-  @apply text-gray-600 dark:text-gray-300;
+	@apply text-gray-600 dark:text-gray-300;
 }
 
 .notion-code > code {
-  @apply text-gray-900;
+	@apply text-gray-900;
 }
 
 pre[class*='language-'] {
-  line-height: inherit;
+	line-height: inherit;
 }
 
 .notion-bookmark:hover {
-  @apply border-blue-400;
+	@apply border-blue-400;
 }
 .notion-viewport {
-  z-index: -10;
+	z-index: -10;
 }
 .notion-asset-caption {
-  @apply text-center;
-  @apply text-gray-500 dark:text-gray-400;
+	@apply text-center;
+	@apply text-gray-500 dark:text-gray-400;
 }
 .notion-full-width {
-  @apply px-0;
+	@apply px-0;
 }
 .notion-page {
-  @apply w-auto;
-  @apply px-0;
+	@apply w-auto;
+	@apply px-0;
 }
 .notion-quote {
-  padding: 0.2em 0.9em;
+	padding: 0.2em 0.9em;
 }
 .notion-collection {
-  @apply max-w-full;
+	@apply max-w-full;
 }
 .notion-collection > .notion-collection-header {
-  @apply px-0 !important;
+	@apply px-0 !important;
 }
 .notion-collection > .notion-table {
-  @apply max-w-full !important;
+	@apply max-w-full !important;
 }
 .notion-collection > .notion-table > .notion-table-view {
-  @apply px-0 !important;
+	@apply px-0 !important;
 }
 .notion-collection-view-type {
-  @apply hidden;
+	@apply hidden;
 }
 .notion-collection-row {
-  @apply hidden;
+	@apply hidden;
 }
