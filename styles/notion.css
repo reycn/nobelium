@@ -3,7 +3,8 @@
 .notion {
 	@apply text-gray-600 dark:text-gray-300;
 	overflow-wrap: break-word;
-	font-family: Times New Roman, Times, serif;
+	font-family: "Source Serif", ui-serif, Georgia, Cambria, Times New Roman, Times, serif, "Noto Serif CJK SC",
+		"Noto Serif SC";
 }
 .notion,
 .notion-text,
