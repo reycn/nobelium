@@ -1,7 +1,6 @@
 /* eslint-disable indent */
 /* eslint-disable no-tabs */
 import BLOG from '@/blog.config'
-import Vercel from '@/components/Vercel'
 const Footer = ({ fullWidth }) => {
   const d = new Date()
   const y = d.getFullYear()
