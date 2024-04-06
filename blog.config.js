@@ -2,7 +2,7 @@ const BLOG = {
 	title: '言理',
 	author: 'Reynard',
 	email: 'rey@pku.edu.cn',
-	link: 'https://quoth.win',
+	link: 'https://blog.rongxin.me',
 	description: '道理讲通了就可以了',
 	lang: 'zh-CN',
 	appearance: 'auto', // ['light', 'dark', 'auto'],
