@@ -11,8 +11,9 @@ const NavBar = () => {
   const links = [
     { id: 0, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
     { id: 1, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
-    { id: 2, name: locale.NAV.RSS, to: '/feed', show: true, external: true },
-    { id: 3, name: locale.NAV.SEARCH, to: '/search', show: true }
+    { id: 2, name: locale.NAV.RSS, to: '/feed', show: true },
+    { id: 3, name: locale.NAV.SEARCH, to: '/search', show: true },
+    { id: 4, name: locale.NAV.LANG, to: locale.NAV.LANGV, show: true }
   ]
   return (
     <div className="flex-shrink-0">
@@ -24,7 +25,9 @@ const NavBar = () => {
                 key={link.id}
                 className="block ml-4 text-black dark:text-gray-50 nav"
               >
-                <Link href={link.to} target={link.external ? '_blank' : null}>{link.name}</Link>
+                <Link href={link.to}>
+                  {link.name}
+                </Link>
               </li>
             )
         )}
