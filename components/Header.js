@@ -12,8 +12,9 @@ const NavBar = () => {
     { id: 0, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
     { id: 1, name: locale.NAV.SEARCH, to: '/search', show: true },
     { id: 2, name: locale.NAV.RSS, to: '/feed', show: true, external: true },
-    { id: 3, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
-    { id: 4, name: "English", to: 'https://rongxin.me', show: true }
+    { id: 3, name: "画廊", to: 'https://photo.rongxin.me/', show: true },
+    { id: 4, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
+    { id: 5, name: "English", to: 'https://rongxin.me', show: true }
   ]
   return (
     <div className="flex-shrink-0">
